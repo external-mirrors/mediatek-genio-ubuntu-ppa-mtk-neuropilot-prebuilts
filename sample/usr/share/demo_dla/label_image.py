@@ -60,6 +60,17 @@ def inference_dla():
     
 
 if __name__ == "__main__":
+
+    # get python script location
+    head, tail = os.path.split(__file__)
+    pwd = os.path.join(head, '')
+　
+    img_file = pwd +"grace_hopper.jpg"
+    img_bin_path = pwd +"grace_hopper.bin"
+    tflite_model = pwd +"mobilenet_v1_1.0_224_quant.tflite"
+    dla_model_path = pwd +"mobilenet_v1_1.0_224_quant.dla"
+    label_file = pwd +"imagenet_slim_labels.txt"
+
     query_backends()
     img_to_bin()
     tflite_to_dla()

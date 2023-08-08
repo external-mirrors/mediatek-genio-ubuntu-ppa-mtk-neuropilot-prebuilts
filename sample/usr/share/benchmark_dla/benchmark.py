@@ -304,7 +304,7 @@ parser.add_argument(
 
 parser.add_argument(
         '--file',
-        default=None,
+        default="",
         help='Input a tflite model to inference. it will be executed with option: --target')
 
 parser.add_argument(
@@ -332,8 +332,9 @@ parser.add_argument(
 
 args = parser.parse_args()
 
-
-pwd = "/usr/share/benchmark_dla/"
+# get python script location
+head, tail = os.path.split(__file__)
+pwd = os.path.join(head, '')
 
 
 # preapre log
