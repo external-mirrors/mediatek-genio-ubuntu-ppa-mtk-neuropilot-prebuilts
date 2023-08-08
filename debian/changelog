@@ -1,3 +1,17 @@
+mediatek-neuropilot (6.0+genio23.1~pr2-0genio1) jammy; urgency=medium
+
+  Update IoT Yocto v23.1 PR2 pre-release with following commits:
+
+  * neuropilot: np6: Refine error message to print detailed information for easier debugging
+  * neuropilot: np6: Update release note
+  * neuropilot: np6: Remove misleading warning messages and print detailed information for easier debugging
+  * neuropilot: Update benchmark script to add error handling for missing input file
+  * neuropilot: Update benchmark script to remove hardcoded python script path
+  * neuropilot: Update demo script to remove hardcoded python script path
+  * neuropilot: Update release note
+
+ -- Pablo Sun <pablo.sun@mediatek.com>  Tue, 08 Aug 2023 20:13:06 +0800
+
 mediatek-neuropilot (6.0+genio23.1~pr1-0genio1) jammy; urgency=medium
 
   * Ubuntu: Add debian control files for NeuroPilot 6.0 prebuilt
