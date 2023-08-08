@@ -1,0 +1,15 @@
+mediatek-neuropilot (6.0+genio23.1~pr1-0genio1) jammy; urgency=medium
+
+  * Ubuntu: Add debian control files for NeuroPilot 6.0 prebuilt
+    binaries and header files for Genio platform. 
+    
+  * Prebuilt binaries provides offline compilers
+    and runtime libraries for hardware accelerated machine learning
+    model inference.
+
+  * These binaries are built for Genio IoT Yocto v23.1 and is 
+    also compatible to Genio Ubuntu. 
+  
+  * These prebuilt libraries links to clang C++ runtime.
+
+ -- Pablo Sun <pablo.sun@mediatek.com>  Thu, 13 Jul 2023 16:27:42 +0800
