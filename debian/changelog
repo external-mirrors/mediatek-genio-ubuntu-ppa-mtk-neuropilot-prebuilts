@@ -1,3 +1,10 @@
+mediatek-neuropilot (6.0+genio23.1~pr2-0genio2) jammy; urgency=medium
+
+  * Update copyright file to provide text of AIOT SOFTWARE LICENSE AGREEMENT,
+    and update the short name to MEDIATEK-IOT-SLA.
+
+ -- Pablo Sun <pablo.sun@mediatek.com>  Thu, 26 Oct 2023 14:40:12 +0800
+
 mediatek-neuropilot (6.0+genio23.1~pr2-0genio1) jammy; urgency=medium
 
   Update IoT Yocto v23.1 PR2 pre-release with following commits:
