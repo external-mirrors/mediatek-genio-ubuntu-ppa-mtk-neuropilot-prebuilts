@@ -1,3 +1,10 @@
+mediatek-neuropilot (6.0+genio23.1~pr2-0genio3) jammy; urgency=medium
+
+  * Install debian/copyright file to /usr/share/doc/ so the package LICENSE
+    info can be properly detected as MEDIATEK-IOT-SLA.
+
+ -- Pablo Sun <pablo.sun@mediatek.com>  Fri, 27 Oct 2023 15:04:20 +0800
+
 mediatek-neuropilot (6.0+genio23.1~pr2-0genio2) jammy; urgency=medium
 
   * Update copyright file to provide text of AIOT SOFTWARE LICENSE AGREEMENT,
