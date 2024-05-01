@@ -1,3 +1,10 @@
+mediatek-neuropilot (6.0+genio23.2-0genio1) jammy; urgency=medium
+
+  * Update prebuilt binary packge to IoT Yocto v23.2.
+  * Fix an issue that causes label_image.py fail to run.
+
+ -- Pablo Sun <pablo.sun@mediatek.com>  Wed, 01 May 2024 14:06:42 +0800
+
 mediatek-neuropilot (6.0+genio23.1~pr2-0genio3) jammy; urgency=medium
 
   * Install debian/copyright file to /usr/share/doc/ so the package LICENSE
