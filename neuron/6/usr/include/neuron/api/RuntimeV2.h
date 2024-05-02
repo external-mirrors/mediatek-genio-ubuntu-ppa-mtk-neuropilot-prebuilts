@@ -83,7 +83,10 @@ typedef struct {
  * SyncInferenceRequest, on the other hand, always block until the request finishes.
  * The address of the created runtime instance will be passed back in *runtime.
  * @param pathToDlaFile The DLA file path.
- * @param nbThreads The number of threads in the runtime.
+ * @param nbThreads The number of threads in the runtime. Large value for 'nbThread' could result
+ *                  in a large memory footprint. 'nbThread' is the number of working threads and
+ *                  each thread would maintain its own working buffer, so the total memory footprint
+ *                  of all threads could be large.
  * @param runtime The pointer will be modified to the created NeuronRuntimeV2 instance on success.
  * @param backlog The maximum size of the backlog ring buffer. In most cases, using 2048 is enough.
  * @return A RuntimeAPI error code.
@@ -94,7 +97,10 @@ int NeuronRuntimeV2_create(const char* pathToDlaFile, size_t nbThreads, void** r
 /**
  * Like NeuronRuntimeV2_create(), but it takes an additional option string.
  * @param pathToDlaFile The DLA file path.
- * @param nbThreads The number of threads in the runtime.
+ * @param nbThreads The number of threads in the runtime. Large value for 'nbThread' could result
+ *                  in a large memory footprint. 'nbThread' is the number of working threads and
+ *                  each thread would maintain its own working buffer, so the total memory footprint
+ *                  of all threads could be large.
  * @param runtime The pointer will be modified to the created NeuronRuntimeV2 instance on success.
  * @param backlog The maximum size of the backlog ring buffer. In most cases, using 2048 is enough.
  * @param options A null-terminated C-string specifying runtime options.
@@ -183,8 +189,7 @@ int NeuronRuntimeV2_getOutputNumber(void* runtime, size_t* size);
 
 /**
  * Get the rank required by the input tensor (specified by handle).
- * Pass back the expected rank in *rank for the tensor which holds the specified
- * input handle.
+ * Pass back the expected rank in *rank for the tensor which holds the specified input handle.
  * @param runtime The address of the created neuron runtime instance.
  * @param handle The frontend IO index.
  * @param rank The input rank.
@@ -267,6 +272,16 @@ int NeuronRuntimeV2_getOutputPaddedSize(void* runtime, uint64_t handle, size_t* 
  */
 int NeuronRuntimeV2_getOutputPaddedDimensions(void* runtime, uint64_t handle,
                                             RuntimeAPIDimensions* dims);
+
+/**
+ * Get the rank required by the output tensor (specified by handle).
+ * Pass back the expected rank in *rank for the tensor which holds the specified output handle.
+ * @param runtime The address of the created neuron runtime instance.
+ * @param handle The frontend IO index.
+ * @param rank The output rank.
+ * @return A RuntimeAPI error code.
+ */
+int NeuronRuntimeV2_getOutputRank(void* runtime, uint64_t handle, uint32_t* rank);
 
 /**
  * Set shape for the input tensor which hold the specified input handle in the

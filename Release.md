@@ -1,5 +1,112 @@
 # Release Note
 
+## 2023/12/7
+
+Commit: cbad8ce916ff4e676defa13563b660c6673d28e0
+
+Binaries source:
+
+- Repo: aiot_int/bsp/neuron-pilot-dev
+
+- Branch: NP6_0
+
+- Commit:   c3532ffd7cf5fed19b696d2f5a354f6f13fb5d59
+
+  |               Binary               |                  Commit                  |         Repo/Branch         | Module |
+  | :--------------------------------: | :--------------------------------------: | :-------------------------: | :----: |
+  |        libapu_mdw.so.2.0.0         | 88f5f1215381087737b262747ff2901260c0fef4 |    aiv-mp-hardknott.mp1     |        |
+  |     libapu_mdw_batch.so.2.0.0      | 88f5f1215381087737b262747ff2901260c0fef4 |    aiv-mp-hardknott.mp1     |        |
+  |      libapusys_edma.so.3.0.0       | 88f5f1215381087737b262747ff2901260c0fef4 |    aiv-mp-hardknott.mp1     |        |
+  |        libmdla_ut.so.2.0.0         | c3532ffd7cf5fed19b696d2f5a354f6f13fb5d59 |       alps-mp-t0.mp1        |        |
+  |        libmdla_ut.so.3.0.0         | 78a707e2cda54500af8db2b2f1b479be9fc7ca6e |       alps-mp-t0.mp1        |        |
+  |          libvpu5.so.5.0.0          | 4ad18f265d97cf44ed3badc491cdceb891da9cbf |       alps-mp-t0.mp5        |        |
+  | libneuronusdk_runtime.mtk.so.6.3.3 | dff37081fa477fd861f859e782c4b12bcd71ab66 |           NP6_0             |        | 
+  | libneuronusdk_adapter.mtk.so.6.3.3 | dff37081fa477fd861f859e782c4b12bcd71ab66 |           NP6_0             |        | 
+  |     libneuron_platform.vpu.so      | dff37081fa477fd861f859e782c4b12bcd71ab66 |           NP6_0             |        | 
+  |             ncc-tflite             | 31b04ec356c3d2ca8319d74b29cc5d2965bf7e1b |           NP6_0             |        |
+  |              neuronrt              | 31b04ec356c3d2ca8319d74b29cc5d2965bf7e1b |           NP6_0             |        |
+  |         runtime_api_sample         | 31b04ec356c3d2ca8319d74b29cc5d2965bf7e1b |           NP6_0             |        |
+
+
+Changes:
+- Turn off libcmdl warning log if GPU is disabled
+- Update midware library
+
+## 2023/12/5
+
+
+Commit: ae952e0a666eb83a53af68b476c873abfaba14fe
+
+Binaries source:
+
+- Repo: aiot_int/bsp/neuron-pilot-dev
+
+- Branch: NP6_0
+
+- Commit:   dff37081fa477fd861f859e782c4b12bcd71ab66
+
+  |               Binary               |                  Commit                  |         Repo/Branch         | Module |
+  | :--------------------------------: | :--------------------------------------: | :-------------------------: | :----: |
+  |        libapu_mdw.so.2.0.0         | 88f5f1215381087737b262747ff2901260c0fef4 |    aiv-mp-hardknott.mp1     |        |
+  |     libapu_mdw_batch.so.2.0.0      | 88f5f1215381087737b262747ff2901260c0fef4 |    aiv-mp-hardknott.mp1     |        |
+  |      libapusys_edma.so.3.0.0       | 88f5f1215381087737b262747ff2901260c0fef4 |    aiv-mp-hardknott.mp1     |        |
+  |        libmdla_ut.so.2.0.0         | 78a707e2cda54500af8db2b2f1b479be9fc7ca6e |       alps-mp-t0.mp1        |        |
+  |        libmdla_ut.so.3.0.0         | 78a707e2cda54500af8db2b2f1b479be9fc7ca6e |       alps-mp-t0.mp1        |        |
+  |          libvpu5.so.5.0.0          | 4ad18f265d97cf44ed3badc491cdceb891da9cbf |       alps-mp-t0.mp5        |        |
+  | libneuronusdk_runtime.mtk.so.6.3.3 | dff37081fa477fd861f859e782c4b12bcd71ab66 |           NP6_0             |        | 
+  | libneuronusdk_adapter.mtk.so.6.3.3 | dff37081fa477fd861f859e782c4b12bcd71ab66 |           NP6_0             |        | 
+  |     libneuron_platform.vpu.so      | dff37081fa477fd861f859e782c4b12bcd71ab66 |           NP6_0             |        | 
+  |             ncc-tflite             | 31b04ec356c3d2ca8319d74b29cc5d2965bf7e1b |           NP6_0             |        |
+  |              neuronrt              | 31b04ec356c3d2ca8319d74b29cc5d2965bf7e1b |           NP6_0             |        |
+  |         runtime_api_sample         | 31b04ec356c3d2ca8319d74b29cc5d2965bf7e1b |           NP6_0             |        |
+
+
+Changes:
+- Turn off libcmdl warning log if GPU is disabled
+- Update midware library
+
+## 2023/12/1
+
+Commit: 687d27eedb3007c18dc9dfad4a985c98079501e8
+
+Binaries source:
+
+- Repo: aiot_int/bsp/neuron-pilot-dev
+
+- Branch: NP6_0
+
+- Commit:   87f52c77428c5c0bb85c38aba09ce581f515a41e
+
+  |               Binary               |                  Commit                  |         Repo/Branch         | Module |
+  | :--------------------------------: | :--------------------------------------: | :-------------------------: | :----: |
+  |        libapu_mdw.so.2.0.0         | 57b1d899ada6731c1cc839305ef9dad7acfc3bde |    aiv-mp-hardknott.mp1     |        |
+  |     libapu_mdw_batch.so.2.0.0      | 57b1d899ada6731c1cc839305ef9dad7acfc3bde |    aiv-mp-hardknott.mp1     |        |
+  |      libapusys_edma.so.3.0.0       | 57b1d899ada6731c1cc839305ef9dad7acfc3bde |    aiv-mp-hardknott.mp1     |        |
+  |        libmdla_ut.so.2.0.0         | 78a707e2cda54500af8db2b2f1b479be9fc7ca6e |       alps-mp-t0.mp1        |        |
+  |        libmdla_ut.so.3.0.0         | 78a707e2cda54500af8db2b2f1b479be9fc7ca6e |       alps-mp-t0.mp1        |        |
+  |          libvpu5.so.5.0.0          | 4ad18f265d97cf44ed3badc491cdceb891da9cbf |       alps-mp-t0.mp5        |        |
+  | libneuronusdk_runtime.mtk.so.6.3.3 | 3522125c1d0722c9eb5cce1f5ed48e435761b8b8 | neuropilot_aiv/neuron/NP6_0 |        | 
+  | libneuronusdk_adapter.mtk.so.6.3.3 | 3522125c1d0722c9eb5cce1f5ed48e435761b8b8 | neuropilot_aiv/neuron/NP6_0 |        | 
+  |     libneuron_platform.vpu.so      | 3522125c1d0722c9eb5cce1f5ed48e435761b8b8 | neuropilot_aiv/neuron/NP6_0 |        | 
+  |             ncc-tflite             | 31b04ec356c3d2ca8319d74b29cc5d2965bf7e1b |           NP6_0             |        |
+  |              neuronrt              | 31b04ec356c3d2ca8319d74b29cc5d2965bf7e1b |           NP6_0             |        |
+  |         runtime_api_sample         | 31b04ec356c3d2ca8319d74b29cc5d2965bf7e1b |           NP6_0             |        |
+
+
+Changes:
+- Fix VPU XRP 3.0 ImportBuffer security issue
+- neuron: Fix coverity
+- neuron NP 6.0.3 official release
+
+
+## 2023/08/10
+
+Commit:   3b73fca6a790cebedd298253ce97496257361f7b
+
+Changes:
+
+- Fix syntax error in label_image.py
+
 ## 2023/07/31
 
 Commit:   f6409400b13be0971d682592600b5048a2847575

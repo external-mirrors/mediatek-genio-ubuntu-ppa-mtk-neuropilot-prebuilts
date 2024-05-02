@@ -109,7 +109,8 @@ typedef struct {
 /// QoS Option for configuration.
 typedef struct {
     /// <b>Execution preference</b>:\n
-    /// NEURONRUNTIME_PREFER_PERFORMANCE, NEURONRUNTIME_PREFER_POWER, or NEURONRUNTIME_TURBO_BOOST.
+    /// NEURONRUNTIME_PREFER_PERFORMANCE, NEURONRUNTIME_PREFER_POWER,
+    /// or NEURONRUNTIME_HINT_TURBO_BOOST.
     RuntimeAPIQoSPreference preference;
     /// <b>Task priority</b>: \n NEURONRUNTIME_PRIORITY_HIGH, NEURONRUNTIME_PRIORITY_MED,
     /// or NEURONRUNTIME_PRIORITY_LOW.
@@ -126,9 +127,11 @@ typedef struct {
     /// @note This member is not supported on MediaTek TV platforms (MT99XX/MT96XX/MT76XX/MT58XX).
     uint8_t boostValue;
     /// <b>Maximum boost value</b>: reserved.
+    /// Assign 0 to this field by default.
     /// @note This member is not supported on MediaTek TV platforms (MT99XX/MT96XX/MT76XX/MT58XX).
     uint8_t maxBoostValue;
     /// <b>Minimum boost value</b>: reserved.
+    /// Assign 0 to this field by default.
     /// @note This member is not supported on MediaTek TV platforms (MT99XX/MT96XX/MT76XX/MT58XX).
     uint8_t minBoostValue;
     /// \b Deadline: deadline for the inference (in msec).

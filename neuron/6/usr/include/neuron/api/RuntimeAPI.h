@@ -104,6 +104,17 @@ int NeuronRuntime_create_with_options(const char* options,
                                       void** runtime);
 
 /**
+ * Clone an existing, loaded Neuron Runtime. The existing Runtime must be DLA-loaded, and the DLA
+ * file must exist, too. The address of the created instance (copy) will be passed by in
+ * *newRuntime. Note that the constant data buffer may be shared with the clone runtime,
+ * reducing memory footprint.
+ * @param oldRuntime The existing, loaded Neuron Runtime.
+ * @param newRuntime The Neuron Runtime clone.
+ * @return A RuntimeAPI error code.
+ */
+int NeuronRuntime_clone(void* oldRuntime, void** newRuntime);
+
+/**
  * Load the compiled network from dla file.
  * @param runtime The address of the created neuron runtime instance.
  * @param pathToDlaFile The dla file path.
@@ -235,8 +246,7 @@ int NeuronRuntime_getInputSize(void* runtime, uint64_t handle, size_t* size);
 
 /**
  * Get the rank required by the input tensor (specified by handle).
- * Pass back the expected rank in *rank for the tensor which holds the specified
- * input handle.
+ * Pass back the expected rank in *rank for the tensor which holds the specified input handle.
  * @param runtime The address of the created neuron runtime instance.
  * @param handle The frontend IO index.
  * @param rank The input rank.
@@ -375,6 +385,16 @@ int NeuronRuntime_getOutputPaddedDimensions(void* runtime, uint64_t handle,
  * @return A RuntimeAPI error code.
  */
 int NeuronRuntime_getSingleOutputPaddedDimensions(void* runtime, RuntimeAPIDimensions* dims);
+
+/**
+ * Get the rank required by the output tensor (specified by handle).
+ * Pass back the expected rank in *rank for the tensor which holds the specified output handle.
+ * @param runtime The address of the created neuron runtime instance.
+ * @param handle The frontend IO index.
+ * @param rank The output rank.
+ * @return A RuntimeAPI error code.
+ */
+int NeuronRuntime_getOutputRank(void* runtime, uint64_t handle, uint32_t* rank);
 
 /**
  * Get the profiled QoS data and executing boost value (the actual boost value during execution).
